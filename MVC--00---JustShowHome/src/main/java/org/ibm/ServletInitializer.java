@@ -7,6 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		System.out.println("------DISPATCHER SERVLET----------");
 		return application.sources(Mvc00JustShowHomeApplication.class);
 	}
 
