@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<body>
+
+
+SIMPLE MESSAGE---  <span th:text="${msg}"></span>
+<h1>-------------------------------PASS OBJECT-------------------------------------</h1>
+<span th:text="${employee}"></span>
+<h1>----------------------------PASS OBJECT EACH----------------------------------------</h1>
+<span th:text="${employee.eid}"></span>
+<span th:text="${employee.ename}"></span>
+<span th:text="${employee.esal}"></span>
+<h1>---------------------------PASS LIST OBJECT in TABLE by LOCAL OBJECT-----------------</h1>
+
+<table border="1">
+
+<tr th:each="ob:${list}">
+			<td th:text="${ob}"></td>
+</tr>
+
+</table>
+<!-- http://localhost:2020/MVC--05---Without-WebXml-Webapp-USE-www.thymeleaf.org/data -->
+</body>
+</html>
