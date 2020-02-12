@@ -2,19 +2,19 @@ package org.ibm.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class EmpController {
 
-			@RequestMapping("/data")
+			@RequestMapping("/data/{paraId}/{paraName}/{paraSal}")
 			public String readData (
-									
-														@RequestParam("eid")Integer id,
-														@RequestParam(value="ename", defaultValue="NONE",required = false)String name,
-														@RequestParam(value="esal",required = false)Double sal,
-														Model model
+																	
+													@PathVariable("paraId")Integer id,
+													@PathVariable("paraName")String name,
+													@PathVariable("paraSal")Double sal,
+													Model model
 														
 					) {
 				
@@ -25,7 +25,7 @@ public class EmpController {
 				model.addAttribute("esal", sal);
 				
 				return "EmpDataPage";
-				
+//				http://localhost:2020/MVC--03---RequestParam/data/651645/ANMOL_SONI/65416.65416
 			}
 	
 }
