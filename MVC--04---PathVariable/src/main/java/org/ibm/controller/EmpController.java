@@ -25,7 +25,7 @@ public class EmpController {
 				model.addAttribute("esal", sal);
 				
 				return "EmpDataPage";
-//				http://localhost:2020/MVC--03---RequestParam/data/651645/ANMOL_SONI/65416.65416
+//	   						http://localhost:2020/MVC--03---RequestParam/data/651645/ANMOL_SONI/65416.65416
 			}
 	
 }
